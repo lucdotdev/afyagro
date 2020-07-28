@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "799796014062",
+    "firebase_url": "https://afyagro.firebaseio.com",
+    "project_id": "afyagro",
+    "storage_bucket": "afyagro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799796014062:android:769aad4ccb615919dfbcff",
+        "android_client_info": {
+          "package_name": "com.example.afyagro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799796014062-tln47kp20b2vbih3ej04b020unbah3mv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCePi764kYBaWJNTra23rSn03Swi2cdntM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799796014062-tln47kp20b2vbih3ej04b020unbah3mv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

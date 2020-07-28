@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fFFF"
+    tools:context=".ui.home_.MainPharmerActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fFFF"
+        >
+
+        <LinearLayout
+            android:id="@+id/addProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="116dp"
+            android:onClick="addAProduct"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/circular_border_solid"
+            android:gravity="center"
+            android:outlineProvider="bounds"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="101dp"
+                android:layout_height="65dp"
+                android:layout_margin="30dp"
+                android:src="@drawable/ic_add" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ajouter un Produit"
+                android:textColor="@android:color/black"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/myProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="116dp"
+            android:onClick="goToMyProduct"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/circular_border_solid"
+            android:gravity="center"
+            android:outlineProvider="bounds"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addProduct">
+
+            <ImageView
+                android:layout_width="101dp"
+                android:layout_height="65dp"
+                android:layout_margin="30dp"
+                android:src="@drawable/ic_food" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mes produits"
+                android:textColor="@android:color/black"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/seDeconnecter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="116dp"
+            android:onClick="logout"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/circular_border_solid"
+            android:gravity="center"
+            android:outlineProvider="bounds"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myProduct">
+
+            <ImageView
+                android:layout_width="101dp"
+                android:layout_height="65dp"
+                android:layout_margin="30dp"
+                android:src="@drawable/ic_logout" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Se deconnecter"
+                android:textColor="@android:color/black"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
