@@ -231,11 +231,11 @@ public class AddAProduct extends AppCompatActivity {
         // Check which radio button was clicked
         switch (view.getId()) {
             case R.id.radio_animalr:
-                if (checked) myProductType = "1";
+                if (checked) myProductType = "2";
                 break;
             case R.id.radio_vegetables:
                 if (checked)
-                   myProductType = "2";
+                   myProductType = "1";
                 break;
         }
 
