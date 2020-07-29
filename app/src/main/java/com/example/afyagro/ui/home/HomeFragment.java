@@ -86,6 +86,17 @@ public class HomeFragment extends Fragment implements FarmItemRecycleAdapter.OnL
     }
 
     @Override
+    public void onStart() {
+
+        super.onStart();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+    }
+
+    @Override
     public void onItemClick(FarmItem item, int position) {
 
         Intent itemDetails = new Intent(getActivity(), FarmItemDetails.class);

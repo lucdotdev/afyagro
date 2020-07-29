@@ -14,6 +14,7 @@ import android.widget.SearchView;
 
 import com.example.afyagro.R;
 import com.example.afyagro.adapters.FarmItemRecycleAdapter;
+import com.example.afyagro.adapters.FindItemRecycleAdapter;
 import com.example.afyagro.models.FarmItem;
 import com.example.afyagro.ui.home.details.FarmItemDetails;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
@@ -22,7 +23,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
 
-public class SearchFragment extends Fragment implements  FarmItemRecycleAdapter.OnListItemClick {
+public class SearchFragment extends Fragment implements  FindItemRecycleAdapter.OnListItemClick, FindItemRecycleAdapter.OnEmptyList  {
 
 
     private RecyclerView findRecycleView;
@@ -78,7 +79,7 @@ public class SearchFragment extends Fragment implements  FarmItemRecycleAdapter.
                     .setQuery(query, FarmItem.class)
                     .build();
 
-            this.adapter = new FarmItemRecycleAdapter(options, this);
+            this.adapter = new FindItemRecycleAdapter(options, this, this);
             adapter.startListening();
             findRecycleView.setLayoutManager(new LinearLayoutManager(getContext()));
             findRecycleView.setAdapter(adapter);
@@ -94,12 +95,16 @@ public class SearchFragment extends Fragment implements  FarmItemRecycleAdapter.
                     .setQuery(query, FarmItem.class)
                     .build();
 
-            this.adapter = new FarmItemRecycleAdapter(options, this);
+            this.adapter = new FindItemRecycleAdapter(options, this, this);
             adapter.startListening();
             findRecycleView.setLayoutManager(new LinearLayoutManager(getContext()));
             findRecycleView.setAdapter(adapter);
         }
     }
+
+
+
+
 
     @Override
     public void onItemClick(FarmItem item, int position) {
@@ -113,6 +118,11 @@ public class SearchFragment extends Fragment implements  FarmItemRecycleAdapter.
         itemDetails.putExtra("id", item.getPublisherId());
 
         startActivity(itemDetails);
+
+    }
+
+    @Override
+    public void onEmpty(boolean k) {
 
     }
 }

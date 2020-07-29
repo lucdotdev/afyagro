@@ -8,6 +8,7 @@ public class FarmItem {
     private String publisherId;
     private String photoPath;
     private String price;
+    private String uid;
 
     public FarmItem(){}
 
@@ -75,5 +76,13 @@ public class FarmItem {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 }

@@ -21,10 +21,14 @@ public class MainPharmerActivity extends AppCompatActivity {
     }
 
     public void goToMyProduct(View view) {
+        Intent intent = new Intent(this, MyProduct.class);
+        startActivity(intent);
 
     }
 
     public void addAProduct(View view) {
+        Intent intent = new Intent(this, AddAProduct.class);
+        startActivity(intent);
     }
 
     public void logout(View view) {

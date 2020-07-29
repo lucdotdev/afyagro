@@ -12,21 +12,48 @@
         android:background="#fFFF"
         >
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="44dp"
+            android:padding="10dp"
+            android:text="Bonjour !"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:text="Que voulez vous faire ?"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
         <LinearLayout
             android:id="@+id/addProduct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="116dp"
-            android:onClick="addAProduct"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/circular_border_solid"
             android:gravity="center"
+            android:onClick="addAProduct"
             android:outlineProvider="bounds"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/textView5">
 
             <ImageView
                 android:layout_width="101dp"
@@ -44,13 +71,12 @@
                 android:textSize="16dp" />
         </LinearLayout>
 
-
         <LinearLayout
             android:id="@+id/myProduct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="116dp"
+            android:layout_marginTop="70dp"
             android:onClick="goToMyProduct"
             android:layout_marginEnd="16dp"
             android:background="@drawable/circular_border_solid"
@@ -83,7 +109,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="116dp"
+            android:layout_marginTop="70dp"
             android:onClick="logout"
             android:layout_marginEnd="16dp"
             android:background="@drawable/circular_border_solid"

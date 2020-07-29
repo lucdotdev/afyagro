@@ -1,5 +1,6 @@
 package com.example.afyagro.ui.home;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -78,6 +79,7 @@ public class AccountFragment extends Fragment {
 
         SharedPreferences prefs = Objects.requireNonNull(getActivity()).getSharedPreferences("AUTH", MODE_PRIVATE);
         firebaseFirestore.collection("users").document(Objects.requireNonNull(prefs.getString("auth_id", ""))).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 name.setText("Nom: " +Objects.requireNonNull(task.getResult()).getString("name"));
