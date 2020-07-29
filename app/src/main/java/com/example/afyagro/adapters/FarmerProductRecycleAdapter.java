@@ -101,7 +101,7 @@ public class FarmerProductRecycleAdapter extends FirestoreRecyclerAdapter<FarmIt
         if(!model.getPhotoPath().isEmpty()){
             Picasso.get()
                     .load(model.getPhotoPath())
-                    .resize(400, 200)
+                    .resize(200, 200)
                     .centerCrop()
                     .into(holder.itemImage);
         }

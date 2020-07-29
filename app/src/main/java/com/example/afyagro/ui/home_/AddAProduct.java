@@ -206,6 +206,7 @@ public class AddAProduct extends AppCompatActivity {
                 item.put("publisherId", prefs.getString("auth_id", ""));
                 item.put("type", myProductType);
                 item.put("photoPath", photoPath);
+                item.put("searchName", myproductName.getText().toString().trim().toLowerCase());
 
 
                 firebaseFirestore.collection("items").add(item).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
