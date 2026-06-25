@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.example.afyagro.R;
+import com.example.afyagro.ui.admin.AdminActivity;
 import com.example.afyagro.ui.home.MainActivity;
 import com.example.afyagro.ui.home_.MainPharmerActivity;
 
@@ -39,6 +40,15 @@ public class SplashScreen extends AppCompatActivity {
                     @Override
                     public void run() {
                         Intent intent=new Intent(SplashScreen.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                },2000);
+            } else if(type== 3){
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent intent=new Intent(SplashScreen.this, AdminActivity.class);
                         startActivity(intent);
                         finish();
                     }

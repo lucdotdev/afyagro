@@ -116,6 +116,7 @@ public class SearchFragment extends Fragment implements  FindItemRecycleAdapter.
         itemDetails.putExtra("desc", item.getDescription());
         itemDetails.putExtra("price", item.getPrice());
         itemDetails.putExtra("id", item.getPublisherId());
+        itemDetails.putExtra("item_id", item.getUid());
 
         startActivity(itemDetails);
 

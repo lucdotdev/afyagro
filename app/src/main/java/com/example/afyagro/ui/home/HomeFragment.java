@@ -130,6 +130,7 @@ public class HomeFragment extends Fragment implements FarmItemRecycleAdapter.OnL
         itemDetails.putExtra("desc", item.getDescription());
         itemDetails.putExtra("price", item.getPrice());
         itemDetails.putExtra("id", item.getPublisherId());
+        itemDetails.putExtra("item_id", item.getUid());
 
         startActivity(itemDetails);
 

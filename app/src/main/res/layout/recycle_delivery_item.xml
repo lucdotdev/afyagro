@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/circular_border_solid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/deliveryItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="@string/delivery_label_item" />
+
+        <TextView
+            android:id="@+id/deliveryBuyer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@android:color/black"
+            android:text="@string/delivery_label_buyer" />
+
+        <TextView
+            android:id="@+id/deliveryStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            android:text="@string/delivery_label_status" />
+
+        <TextView
+            android:id="@+id/deliveryDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@android:color/black"
+            android:text="@string/delivery_not_set" />
+
+        <TextView
+            android:id="@+id/deliveryDelay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#d32f2f"
+            android:visibility="gone"
+            android:text="@string/delivery_label_delay" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <Button
+                android:id="@+id/confirmDateTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/next"
+                android:text="@string/admin_confirm_datetime" />
+
+            <Button
+                android:id="@+id/reportDelay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/next"
+                android:text="@string/admin_report_delay" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/markDelivered"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/next"
+            android:text="@string/admin_mark_delivered" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

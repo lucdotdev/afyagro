@@ -122,6 +122,36 @@
                     android:text="Se connecter"
                     android:textColor="@android:color/white" />
 
+                <TextView
+                    android:id="@+id/loginForgotPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="onForgotPasswordClick"
+                    android:padding="8dp"
+                    android:text="@string/login_forgot_password"
+                    android:textColor="#8e9cfe"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/login_or"
+                    android:textColor="#3c4b5d"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/googleSignInBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/circular_border_solid"
+                    android:padding="16dp"
+                    android:text="@string/login_with_google"
+                    android:textColor="#3c4b5d" />
+
             </LinearLayout>
 
 

@@ -24,6 +24,8 @@
         <activity android:name=".ui.home_.MainPharmerActivity" />
         <activity android:name=".ui.home.details.FarmItemDetails" />
         <activity android:name=".ui.map.DeliveryMapActivity" />
+        <activity android:name=".ui.admin.AdminActivity" />
+        <activity android:name=".ui.first.ForgotPasswordActivity" />
         <activity android:name=".ui.first.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

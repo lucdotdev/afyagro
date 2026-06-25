@@ -162,6 +162,30 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/orderContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contactContainer">
+
+            <Button
+                android:id="@+id/orderButton"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:padding="15dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/next"
+                android:onClick="onOrderClick"
+                android:text="@string/order_button" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
@@ -169,7 +193,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/contactContainer">
+            app:layout_constraintTop_toBottomOf="@+id/orderContainer">
 
             <Button
                 android:id="@+id/trackDelivery"
