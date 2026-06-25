@@ -105,6 +105,38 @@
 
 
         <LinearLayout
+            android:id="@+id/addStory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="70dp"
+            android:onClick="addAStory"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/circular_border_solid"
+            android:gravity="center"
+            android:outlineProvider="bounds"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myProduct">
+
+            <ImageView
+                android:layout_width="101dp"
+                android:layout_height="65dp"
+                android:layout_margin="30dp"
+                android:src="@drawable/ic_add" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/story_add"
+                android:textColor="@android:color/black"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
             android:id="@+id/seDeconnecter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -118,7 +150,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/myProduct">
+            app:layout_constraintTop_toBottomOf="@+id/addStory">
 
             <ImageView
                 android:layout_width="101dp"

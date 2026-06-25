@@ -4,4 +4,15 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="yes">oui</string>
     <string name="no">non</string>
+    <string name="stories_title">Stories :</string>
+    <string name="story_your_story">Votre story</string>
+    <string name="story_add">Ajouter une story</string>
+    <string name="story_add_hint">Partagez une photo de votre ferme ou de vos produits</string>
+    <string name="story_choose">Choisir une photo</string>
+    <string name="story_caption_hint">Ajouter une légende (optionnel)</string>
+    <string name="story_share">Partager</string>
+    <string name="story_close">Fermer</string>
+    <string name="story_uploading">Publication…</string>
+    <string name="story_pick_first">Veuillez choisir une photo</string>
+    <string name="story_no_stories">Aucune story pour le moment</string>
 </resources>

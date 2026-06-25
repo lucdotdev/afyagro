@@ -11,6 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.stories.AddStory" />
+        <activity
+            android:name=".ui.stories.StoryViewer"
+            android:theme="@style/StoryViewerTheme" />
         <activity android:name=".ui.home_.AddAProduct"/>
         <activity android:name=".ui.home_.MyProduct" />
         <activity android:name=".ui.home_.MainPharmerActivity" />

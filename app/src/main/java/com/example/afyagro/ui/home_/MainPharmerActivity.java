@@ -31,6 +31,11 @@ public class MainPharmerActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void addAStory(View view) {
+        Intent intent = new Intent(this, com.example.afyagro.ui.stories.AddStory.class);
+        startActivity(intent);
+    }
+
     public void logout(View view) {
         SharedPreferences.Editor editor = getSharedPreferences("AUTH", MODE_PRIVATE).edit();
         editor.remove("auth_id");

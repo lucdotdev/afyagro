@@ -10,4 +10,11 @@
 
     </style>
 
+    <!-- Immersive full screen theme for the story player. -->
+    <style name="StoryViewerTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
 </resources>

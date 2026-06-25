@@ -13,15 +13,19 @@ import android.view.ViewGroup;
 
 import com.example.afyagro.R;
 import com.example.afyagro.adapters.FarmItemRecycleAdapter;
+import com.example.afyagro.adapters.StoryRecycleAdapter;
 import com.example.afyagro.models.FarmItem;
+import com.example.afyagro.models.Story;
 import com.example.afyagro.ui.home.details.FarmItemDetails;
+import com.example.afyagro.ui.stories.AddStory;
+import com.example.afyagro.ui.stories.StoryViewer;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
 
-public class HomeFragment extends Fragment implements FarmItemRecycleAdapter.OnListItemClick {
+public class HomeFragment extends Fragment implements FarmItemRecycleAdapter.OnListItemClick, StoryRecycleAdapter.OnStoryClick {
 
 
     public HomeFragment() {
@@ -52,9 +56,28 @@ public class HomeFragment extends Fragment implements FarmItemRecycleAdapter.OnL
 
         Query eggs_query = firebaseFirestore.collection("items").whereEqualTo("type", "1");
         Query cows_qurey = firebaseFirestore.collection("items").whereEqualTo("type", "2");
+        Query stories_query = firebaseFirestore.collection("stories")
+                .orderBy("timestamp", Query.Direction.DESCENDING);
 
         RecyclerView home_eggs = view.findViewById(R.id.home_eggs);
         RecyclerView home_cows= view.findViewById(R.id.home_cows);
+        RecyclerView home_stories = view.findViewById(R.id.home_stories);
+
+        // Stories bar (Instagram/TikTok style)
+        FirestoreRecyclerOptions<Story> optionsStories = new FirestoreRecyclerOptions.Builder<Story>()
+                .setQuery(stories_query, Story.class)
+                .build();
+        FirestoreRecyclerAdapter adapterStories = new StoryRecycleAdapter(optionsStories, this);
+        adapterStories.startListening();
+        home_stories.setAdapter(adapterStories);
+        home_stories.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+
+        view.findViewById(R.id.addStoryButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), AddStory.class));
+            }
+        });
 
 
 
@@ -110,5 +133,13 @@ public class HomeFragment extends Fragment implements FarmItemRecycleAdapter.OnL
 
         startActivity(itemDetails);
 
+    }
+
+    @Override
+    public void onStoryClick(Story story, int position) {
+        Intent storyViewer = new Intent(getActivity(), StoryViewer.class);
+        storyViewer.putExtra("publisherId", story.getPublisherId());
+        storyViewer.putExtra("publisherName", story.getPublisherName());
+        startActivity(storyViewer);
     }
 }
