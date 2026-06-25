@@ -40,6 +40,7 @@ public class DeliveryMapActivity extends AppCompatActivity {
     // Centre par défaut : Kinshasa (RDC), cohérent avec l'indicatif +243 utilisé dans l'app.
     private static final double DEFAULT_LAT = -4.4419;
     private static final double DEFAULT_LNG = 15.2663;
+    private static final double DEFAULT_ZOOM_LEVEL = 15.0;
 
     private MapView map;
     private MyLocationNewOverlay myLocationOverlay;
@@ -59,7 +60,7 @@ public class DeliveryMapActivity extends AppCompatActivity {
         map = findViewById(R.id.deliveryMap);
         map.setTileSource(TileSourceFactory.MAPNIK);
         map.setMultiTouchControls(true);
-        map.getController().setZoom(15.0);
+        map.getController().setZoom(DEFAULT_ZOOM_LEVEL);
 
         GeoPoint center = new GeoPoint(DEFAULT_LAT, DEFAULT_LNG);
 
