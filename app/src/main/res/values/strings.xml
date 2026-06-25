@@ -15,4 +15,5 @@
     <string name="story_uploading">Publication…</string>
     <string name="story_pick_first">Veuillez choisir une photo</string>
     <string name="story_no_stories">Aucune story pour le moment</string>
+    <string name="story_failed">Echec de la publication</string>
 </resources>

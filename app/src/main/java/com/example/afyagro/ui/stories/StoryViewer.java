@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 import com.example.afyagro.R;
 import com.example.afyagro.models.Story;
@@ -132,7 +133,8 @@ public class StoryViewer extends AppCompatActivity {
             ProgressBar bar = new ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal);
             bar.setMax(100);
             bar.setProgress(0);
-            bar.setProgressDrawable(getResources().getDrawable(R.drawable.story_progress_segment));
+            bar.setProgressDrawable(ResourcesCompat.getDrawable(
+                    getResources(), R.drawable.story_progress_segment, getTheme()));
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                     0, dp(3), 1f);
             params.setMargins(dp(2), 0, dp(2), 0);

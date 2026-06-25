@@ -132,7 +132,7 @@
                 android:layout_weight="1"
                 android:text="@string/story_add"
                 android:textColor="@android:color/black"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
         </LinearLayout>
 
 

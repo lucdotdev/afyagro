@@ -1,6 +1,5 @@
 package com.example.afyagro.adapters;
 
-import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,7 +37,6 @@ public class StoryRecycleAdapter extends FirestoreRecyclerAdapter<Story, StoryRe
         return new StoryViewHolder(view);
     }
 
-    @SuppressLint("SetTextI18n")
     @Override
     protected void onBindViewHolder(@NonNull StoryViewHolder holder, int position, @NonNull Story model) {
         holder.publisher.setText(model.getPublisherName());

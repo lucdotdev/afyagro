@@ -145,7 +145,7 @@ public class AddStory extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         progressDialog.dismiss();
-                        Toast.makeText(AddStory.this, "Echec " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddStory.this, R.string.story_failed, Toast.LENGTH_SHORT).show();
                     }
                 });
     }
@@ -167,7 +167,7 @@ public class AddStory extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             finish();
                         } else {
-                            Toast.makeText(AddStory.this, "Echec", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AddStory.this, R.string.story_failed, Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
