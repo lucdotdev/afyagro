@@ -52,6 +52,9 @@ dependencies {
     implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.0.3'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
+    //MAP (OpenStreetMap - no API key required)
+    implementation 'org.osmdroid:osmdroid-android:6.1.20'
+
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

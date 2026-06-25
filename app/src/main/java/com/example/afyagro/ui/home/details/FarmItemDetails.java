@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.afyagro.R;
+import com.example.afyagro.ui.map.DeliveryMapActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -83,5 +84,11 @@ public class FarmItemDetails extends AppCompatActivity {
             Toast.makeText(this, "Whatsapp app not installed in your phone", Toast.LENGTH_SHORT).show();
             e.printStackTrace();
         }
+    }
+
+    public void onTrackDeliveryClick(View view) {
+        Intent intent = new Intent(this, DeliveryMapActivity.class);
+        intent.putExtra("dest_label", extras.getString("vendor"));
+        startActivity(intent);
     }
 }

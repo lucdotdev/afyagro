@@ -16,4 +16,13 @@
     <string name="story_pick_first">Veuillez choisir une photo</string>
     <string name="story_no_stories">Aucune story pour le moment</string>
     <string name="story_failed">Echec de la publication</string>
+
+    <!-- Carte / Livraison (OpenStreetMap) -->
+    <string name="map_title">Suivi de la livraison</string>
+    <string name="map_track_delivery">Suivre la livraison</string>
+    <string name="map_my_position">Ma position</string>
+    <string name="map_destination">Destination</string>
+    <string name="map_permission_required">La localisation est nécessaire pour suivre la livraison</string>
+    <string name="map_locating">Localisation en cours…</string>
+    <string name="map_no_destination">Aucune adresse de livraison définie</string>
 </resources>
