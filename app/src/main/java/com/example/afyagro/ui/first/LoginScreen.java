@@ -64,6 +64,9 @@ public class LoginScreen extends AppCompatActivity {
         this.firebaseFirestore = FirebaseFirestore.getInstance();
         this.mAuth = FirebaseAuth.getInstance();
 
+        // default_web_client_id est généré par le plugin google-services à partir
+        // du client web présent dans google-services.json. Il doit donc exister
+        // pour que la connexion Google fonctionne (oubli fréquent à l'intégration).
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()

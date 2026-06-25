@@ -74,7 +74,8 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             @Override
             public void onVerificationCompleted(@NonNull PhoneAuthCredential credential) {
-                // La vérification automatique reste prise en charge manuellement par l'utilisateur.
+                // Firebase peut vérifier le code automatiquement ; si la récupération
+                // automatique échoue, l'utilisateur saisit le code manuellement à l'étape 2.
             }
 
             @Override
